@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="classBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15171C"/>
+      <stop offset="100%" stop-color="#222530"/>
+    </linearGradient>
+    <linearGradient id="goldClass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B68D40"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#classBg)"/>
+
+  <!-- Top Bar -->
+  <rect width="800" height="40" fill="#121318"/>
+  <circle cx="22" cy="20" r="5" fill="#EF4444"/>
+  <circle cx="40" cy="20" r="5" fill="#F59E0B"/>
+  <circle cx="58" cy="20" r="5" fill="#10B981"/>
+  <text x="400" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#7E8496" text-anchor="middle">Canva & CorelDRAW — Pengelola & Desainer Media Sosial Kelas (2023 - 2025)</text>
+
+  <!-- Instagram Grid Mockup (3x2 Feed Feat Poster) -->
+  <g transform="translate(60, 70)">
+    <!-- Header of Instagram Account -->
+    <g transform="translate(0, 0)">
+      <circle cx="30" cy="30" r="28" fill="#D4AF37" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="30" y="36" font-family="'Playfair Display', serif" font-size="16" font-weight="bold" fill="#121318" text-anchor="middle">TRO</text>
+      
+      <text x="75" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">official.class.tro</text>
+      <text x="75" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94A3B8">Media Informasi & Dokumentasi Angkatan • 2023 - 2025</text>
+    </g>
+
+    <!-- Post Grid (6 Feed items) -->
+    <g transform="translate(0, 75)">
+      <!-- Post 1: Poster Kegiatan -->
+      <rect x="0" y="0" width="105" height="105" rx="6" fill="#1E222D" stroke="#D4AF37" stroke-width="1.5"/>
+      <text x="52" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#D4AF37" text-anchor="middle">POSTER ACARA</text>
+      <text x="52" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#94A3B8" text-anchor="middle">Dies Natalis</text>
+
+      <!-- Post 2: Ucapan Hari Besar -->
+      <rect x="115" y="0" width="105" height="105" rx="6" fill="#1E222D" stroke="#2B3142" stroke-width="1"/>
+      <text x="167" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#38BDF8" text-anchor="middle">HARI BESAR</text>
+      <text x="167" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#94A3B8" text-anchor="middle">Idul Fitri / Libur</text>
+
+      <!-- Post 3: Dokumentasi Praktikum -->
+      <rect x="230" y="0" width="105" height="105" rx="6" fill="#1E222D" stroke="#2B3142" stroke-width="1"/>
+      <text x="282" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#10B981" text-anchor="middle">PRAKTIKUM</text>
+      <text x="282" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#94A3B8" text-anchor="middle">Workshop Otomotif</text>
+
+      <!-- Post 4: Struktur Organisasi -->
+      <rect x="0" y="115" width="105" height="105" rx="6" fill="#1E222D" stroke="#2B3142" stroke-width="1"/>
+      <text x="52" y="170" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#F59E0B" text-anchor="middle">STRUKTUR</text>
+      <text x="52" y="185" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#94A3B8" text-anchor="middle">Pengurus Kelas</text>
+
+      <!-- Post 5: Infografis Jadwal Kuliah -->
+      <rect x="115" y="115" width="105" height="105" rx="6" fill="#1E222D" stroke="#2B3142" stroke-width="1"/>
+      <text x="167" y="170" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#A855F7" text-anchor="middle">JADWAL MINGGUAN</text>
+      <text x="167" y="185" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#94A3B8" text-anchor="middle">Jadwal Praktik</text>
+
+      <!-- Post 6: Recap Foto Kelas -->
+      <rect x="230" y="115" width="105" height="105" rx="6" fill="#1E222D" stroke="#2B3142" stroke-width="1"/>
+      <text x="282" y="170" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#EC4899" text-anchor="middle">RECAP TAHUNAN</text>
+      <text x="282" y="185" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#94A3B8" text-anchor="middle">Memory Archive</text>
+    </g>
+  </g>
+
+  <!-- Right: Deskripsi Tanggung Jawab & Soft Skills -->
+  <g transform="translate(440, 95)">
+    <text x="0" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="bold" fill="#D4AF37" letter-spacing="3">ORGANISASI & MANAJEMEN KELAS</text>
+    <text x="0" y="60" font-family="'Playfair Display', serif" font-size="30" font-weight="bold" fill="#FFFFFF">Graphic Designer &</text>
+    <text x="0" y="95" font-family="'Playfair Display', serif" font-size="30" font-style="italic" fill="#D4AF37">Media Sosial (2023 - 2025)</text>
+
+    <text x="0" y="145" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#A5ACB8" line-height="1.7">
+      Bertanggung jawab atas seluruh visual komunikasi publik kelas:
+    </text>
+    <text x="0" y="170" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#A5ACB8">
+      pembuatan template feed Instagram yang konsisten, infografis jadwal,
+    </text>
+    <text x="0" y="195" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#A5ACB8">
+      serta poster acara kegiatan dengan kecepatan respon tinggi.
+    </text>
+
+    <g transform="translate(0, 235)">
+      <rect x="0" y="0" width="125" height="34" rx="17" fill="#1E222D" stroke="#D4AF37" stroke-width="1"/>
+      <text x="62" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#D4AF37" text-anchor="middle">Teamwork Tim</text>
+
+      <rect x="140" y="0" width="135" height="34" rx="17" fill="#1E222D" stroke="#38BDF8" stroke-width="1"/>
+      <text x="207" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#38BDF8" text-anchor="middle">Response Cepat</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="clientGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D2924"/>
+      <stop offset="100%" stop-color="#181614"/>
+    </linearGradient>
+    <linearGradient id="avatarGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#9E7730"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="80" fill="url(#clientGrad)"/>
+  
+  <!-- Outer Gold Rim -->
+  <circle cx="80" cy="80" r="76" fill="none" stroke="url(#avatarGold)" stroke-width="2"/>
+  
+  <!-- Silhouette Portrait -->
+  <g transform="translate(80, 80)">
+    <!-- Shoulders -->
+    <path d="M -45 65 C -40 35 -20 25 0 25 C 20 25 40 35 45 65 Z" fill="#3D3730"/>
+    <!-- Collar & Tie -->
+    <polygon points="0,25 -10,45 0,55 10,45" fill="#E8CDAF"/>
+    <polygon points="-3,35 3,35 0,50" fill="#D4AF37"/>
+    <!-- Head -->
+    <circle cx="0" cy="-5" r="24" fill="#D8BEA1"/>
+    <!-- Hair -->
+    <path d="M -24 -12 C -24 -30 -10 -35 0 -35 C 10 -35 24 -30 24 -12 C 20 -24 5 -26 -5 -25 C -15 -24 -20 -18 -24 -12 Z" fill="#24201C"/>
+    <!-- Glasses -->
+    <circle cx="-9" cy="-6" r="7" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <circle cx="9" cy="-6" r="7" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <line x1="-2" y1="-6" x2="2" y2="-6" stroke="#D4AF37" stroke-width="1.5"/>
+  </g>
+</svg>

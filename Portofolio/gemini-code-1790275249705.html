@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio Interaktif Luqmanul Hakim — Video Editor (Streamer YouTube & TikTok) & Graphic Designer. Spesialis Content Pacing, Sound Design, Thumbnail ber-CTR tinggi, dan Desain Identitas Kreatif.">
+  <meta name="keywords" content="Luqmanul Hakim, Video Editor, Streamer Video Editor, Graphic Designer, YouTube Shorts, TikTok Editor, Premiere Pro, After Effects, Banjarmasin">
+  <meta name="author" content="Luqmanul Hakim">
+  <title>Luqmanul Hakim — Video Editor & Graphic Designer</title>
+
+  <!-- Favicon Y2K LH -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ff00ff' stroke='%2300ffff' stroke-width='8'/><text x='50' y='64' font-family='monospace' font-size='40' font-weight='bold' fill='%2300ffff' text-anchor='middle'>LH</text></svg>">
+
+  <!-- Google Fonts Y2K (Chakra Petch, Silkscreen, Space Grotesk) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Silkscreen&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- CSS Kustom Tema Cyber Y2K (Menimpa style.css lama) -->
+  <style>
+    /* Y2K Theme Variables Overrides */
+    :root {
+      --bg-main: #05050a;
+      --bg-secondary: #0a0a14;
+      --bg-card: rgba(10, 10, 20, 0.8);
+      --accent-gold: #ff00ff; /* Neon Pink */
+      --accent-tint: rgba(255, 0, 255, 0.15);
+      --border-gold: #00ffff; /* Neon Cyan */
+      --border-subtle: #2a2a4a;
+      --text-primary: #ffffff;
+      --text-secondary: #00ffff;
+      --text-muted: #8888aa;
+      --y2k-pink: #ff00ff;
+      --y2k-cyan: #00ffff;
+      --y2k-yellow: #eaff00;
+    }
+
+    /* Global Body & Cyberspace Grid */
+    body {
+      background-color: var(--bg-main) !important;
+      background-image:
+        linear-gradient(var(--border-subtle) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+      background-size: 40px 40px;
+      font-family: 'Space Grotesk', sans-serif !important;
+      color: var(--text-primary) !important;
+    }
+
+    /* Tipografi Y2K */
+    .heading-serif, .font-serif {
+      font-family: 'Chakra Petch', sans-serif !important;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .subheading-gold {
+      font-family: 'Silkscreen', cursive !important;
+      color: var(--y2k-cyan) !important;
+      text-shadow: 2px 2px 0px var(--y2k-pink);
+      letter-spacing: 1px;
+      font-size: 1.25rem !important;
+    }
+
+    .highlight-gold {
+      color: var(--y2k-pink) !important;
+      text-shadow: 3px 3px 0px var(--y2k-cyan);
+      -webkit-text-stroke: 1px #fff;
+    }
+
+    /* Brutalist Buttons & Elements */
+    .rounded-2xl, .rounded-xl, .rounded-full, .rounded-lg {
+      border-radius: 0 !important; /* Hilangkan efek membulat */
+    }
+
+    .btn-classic-primary, .btn-classic-secondary, .form-submit-btn, .filter-btn, .nav-cta-btn {
+      background: var(--bg-main) !important;
+      border: 2px solid var(--y2k-cyan) !important;
+      color: var(--y2k-cyan) !important;
+      box-shadow: 4px 4px 0px var(--y2k-pink) !important;
+      border-radius: 0 !important;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.2s ease-in-out;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .btn-classic-primary:hover, .btn-classic-secondary:hover, .form-submit-btn:hover, .filter-btn:hover, .nav-cta-btn:hover {
+      background: var(--y2k-cyan) !important;
+      color: var(--bg-main) !important;
+      box-shadow: -4px -4px 0px var(--y2k-pink) !important;
+      transform: translate(2px, 2px);
+    }
+
+    /* Cards (Tentang, Skill, Portofolio, Form) */
+    .skill-card, .project-card, .contact-info-card, .contact-form-box, .p-6 {
+      background: var(--bg-card) !important;
+      border: 2px solid var(--y2k-pink) !important;
+      box-shadow: 6px 6px 0px var(--y2k-cyan) !important;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s;
+    }
+
+    .skill-card:hover, .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 10px 10px 0px var(--y2k-yellow) !important;
+      border-color: var(--y2k-cyan) !important;
+    }
+
+    /* Hilangkan Ornamen Klasik Lama */
+    .classic-divider { display: none; }
+
+    /* Gaya Bingkai Profil Y2K */
+    .vintage-frame-container { border: none !important; }
+    .vintage-frame-outer {
+      border: 4px solid var(--y2k-cyan) !important;
+      box-shadow: 12px 12px 0px var(--y2k-pink) !important;
+      background: var(--bg-main) !important;
+      border-radius: 0 !important;
+      padding: 10px;
+    }
+    .vintage-frame-inner {
+      border: 2px dashed var(--y2k-yellow) !important;
+      border-radius: 0 !important;
+    }
+    .vintage-frame-inner img {
+      filter: contrast(120%) saturate(150%) hue-rotate(15deg);
+    }
+    .vintage-stamp {
+      background: var(--y2k-yellow) !important;
+      color: #000 !important;
+      font-family: 'Silkscreen', cursive !important;
+      border: 2px solid #000 !important;
+      box-shadow: 4px 4px 0px var(--y2k-pink);
+      border-radius: 0 !important;
+    }
+
+    /* Badge & Ornamen */
+    .floating-badge-card {
+      background: var(--bg-main) !important;
+      border: 2px solid var(--y2k-cyan) !important;
+      box-shadow: 4px 4px 0px var(--y2k-pink) !important;
+      border-radius: 0 !important;
+      font-family: 'Chakra Petch', sans-serif;
+    }
+    .badge-text-primary { color: var(--y2k-pink) !important; font-weight: bold; }
+    .status-pulse { background: var(--y2k-yellow) !important; box-shadow: 0 0 10px var(--y2k-yellow) !important; }
+    .hero-badge-wrap {
+      border: 1px solid var(--y2k-cyan) !important;
+      background: rgba(0, 255, 255, 0.1) !important;
+      font-family: 'Space Grotesk', monospace !important;
+    }
+
+    /* Navbar Khusus */
+    .floating-navbar {
+      background: rgba(5, 5, 10, 0.95) !important;
+      border: 2px solid var(--y2k-pink) !important;
+      box-shadow: 0px 4px 0px var(--y2k-cyan) !important;
+      border-radius: 0 !important;
+    }
+    .brand-monogram {
+      background: var(--y2k-cyan) !important;
+      color: #000 !important;
+      font-family: 'Silkscreen', cursive !important;
+      border: 2px solid #000 !important;
+      border-radius: 0 !important;
+    }
+
+    /* Progress Bars Skill */
+    .skill-meter-bg { background: var(--border-subtle) !important; border-radius: 0 !important; }
+    .skill-meter-fill { background: linear-gradient(90deg, var(--y2k-cyan), var(--y2k-pink)) !important; border-radius: 0 !important; }
+
+    /* Modals & Sosial Media Khusus Y2K */
+    .project-modal-window {
+      background: var(--bg-main) !important;
+      border: 4px solid var(--y2k-pink) !important;
+      box-shadow: 10px 10px 0px var(--y2k-cyan) !important;
+      border-radius: 0 !important;
+    }
+
+    .y2k-social-btn {
+      border: 2px solid var(--y2k-cyan) !important;
+      background: var(--bg-card) !important;
+      color: var(--text-primary) !important;
+      padding: 0.5rem 1rem !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      transition: all 0.2s !important;
+      border-radius: 0 !important;
+    }
+    .y2k-social-btn:hover {
+      background: var(--y2k-pink) !important;
+      color: #fff !important;
+      box-shadow: 4px 4px 0px var(--y2k-cyan) !important;
+      transform: translate(-2px, -2px) !important;
+    }
+  </style>
+
+  <!-- Stylesheet Utama Bawaan -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="transition-colors duration-300">
+
+  <canvas id="ambient-canvas"></canvas>
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-outline"></div>
+
+  <!-- HEADER -->
+  <header class="floating-navbar-wrapper" id="main-header">
+    <nav class="floating-navbar" aria-label="Navigasi Utama">
+      <a href="#beranda" class="nav-brand flex items-center gap-2" aria-label="Kembali ke Beranda">
+        <div class="brand-monogram">
+          <span>LH</span>
+        </div>
+        <span class="tracking-tight font-serif">Luqmanul Hakim</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <div class="nav-indicator-pill" style="border-radius: 0; background: var(--y2k-cyan);"></div>
+        <li class="nav-item"><a href="#beranda" class="nav-link active">Beranda</a></li>
+        <li class="nav-item"><a href="#tentang" class="nav-link">Tentang</a></li>
+        <li class="nav-item"><a href="#pengalaman" class="nav-link">Pengalaman</a></li>
+        <li class="nav-item"><a href="#keahlian" class="nav-link">Keahlian</a></li>
+        <li class="nav-item"><a href="#karya" class="nav-link">Portofolio</a></li>
+        <li class="nav-item"><a href="#kontak" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions flex items-center gap-2">
+        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Ganti Tema Warna">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+        <a href="#kontak" class="nav-cta-btn hidden sm:inline-flex p-2">
+          <span>Hubungi</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <button class="mobile-nav-toggle" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main>
+    <section class="hero-section" id="beranda">
+      <div class="container mx-auto">
+        <div class="hero-grid">
+          <div class="hero-content-col" data-reveal>
+            <div class="hero-badge-wrap px-3 py-1">
+              <span class="status-pulse"></span>
+              <span class="text-xs uppercase tracking-widest">System Online: Open for Work</span>
+            </div>
+
+            <div class="subheading-gold mt-4">> Video_Editor & Graphic_Designer</div>
+            
+            <h1 class="heading-serif hero-title text-4xl sm:text-5xl lg:text-6xl font-bold mt-2">
+              Menghidupkan Cerita Streamer & Visual <span class="highlight-gold">CYBERPUNK</span>.
+            </h1>
+
+            <p class="hero-description text-base sm:text-lg mt-4">
+              Saya <strong>Luqmanul Hakim</strong>, seorang Video Editor berfokus pada kreator siaran langsung (YouTube & TikTok) serta Graphic Designer. Menggabungkan <em>content pacing</em> presisi tinggi, <em>sound design</em>, dan grafis pemicu klik.
+            </p>
+
+            <div class="hero-buttons flex flex-wrap gap-4 items-center mt-6">
+              <a href="#karya" class="btn-classic-primary p-3">
+                <span>[ Load_Portfolio ]</span>
+              </a>
+              <a href="#kontak" class="btn-classic-secondary p-3">
+                <span>[ Connect_Server ]</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual-col delay-2" data-reveal>
+            <div class="vintage-frame-container">
+              <div class="vintage-stamp p-2">
+                <div class="stamp-inner flex flex-col text-xs font-bold leading-none text-center">
+                  <span>SYS.LH</span>
+                  <span>v.2026</span>
+                </div>
+              </div>
+              <div class="vintage-frame-outer">
+                <div class="vintage-frame-inner overflow-hidden">
+                  <img src="assets/images/profile-lh.svg" alt="Potret Profil Luqmanul Hakim" class="profile-img w-full">
+                </div>
+              </div>
+              <div class="floating-badge-card p-3 flex gap-3 items-center mt-4 absolute -bottom-4 -left-4">
+                <div class="badge-icon-box text-[var(--y2k-pink)]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                  </svg>
+                </div>
+                <div>
+                  <div class="badge-text-primary text-sm uppercase">High Retention Rate</div>
+                  <div class="badge-text-secondary text-xs">CTR Optimized</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION TENTANG -->
+    <section class="section" id="tentang">
+      <div class="container mx-auto">
+        <div class="section-header text-center" data-reveal>
+          <div class="subheading-gold">> WhoAmI.exe</div>
+          <h2 class="heading-serif section-title mt-2">Pilar Kreativitas & Soft Skills</h2>
+          <br>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
+          <div class="lg:col-span-5" data-reveal>
+            <div class="relative group p-6">
+              <img src="assets/images/luqman-about.jpg" alt="Potret Luqmanul Hakim" class="w-full h-full object-cover object-top border-2 border-[var(--y2k-pink)] shadow-[6px_6px_0px_var(--y2k-cyan)]">
+            </div>
+          </div>
+          <div class="lg:col-span-7 about-card-box p-6" data-reveal class="delay-1">
+            <div class="about-quote text-[var(--y2k-cyan)] font-serif italic text-xl border-l-4 border-[var(--y2k-pink)] pl-4 mb-4">
+              "Video editing bukan sekadar memotong klip, melainkan meretas atensi audiens pada setiap detik siaran."
+            </div>
+            <p class="about-text mb-3">
+              Halo! Saya <strong>Luqmanul Hakim</strong>. Saya mengolah materi mentah live stream menjadi konten ringkas, padat aksi, dan berdaya tonton tinggi di YouTube Shorts maupun TikTok.
+            </p>
+            <p class="about-text mb-6">
+              Latar belakang di organisasi dan mitigasi krisis lapangan membuat saya terbiasa memproses data dengan cepat, disiplin tinggi terhadap deadline, dan siap menghadapi *render crash* di saat genting.
+            </p>
+            <div class="about-features grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-[var(--border-subtle)]">
+              <div class="feature-pill flex items-center gap-2 text-sm uppercase font-bold text-[var(--y2k-pink)]">
+                <span>[+] SFX & Audio Mix</span>
+              </div>
+              <div class="feature-pill flex items-center gap-2 text-sm uppercase font-bold text-[var(--y2k-cyan)]">
+                <span>[+] Thumbnail CTR</span>
+              </div>
+              <div class="feature-pill flex items-center gap-2 text-sm uppercase font-bold text-[var(--y2k-yellow)]">
+                <span>[+] Visual Identity</span>
+              </div>
+              <div class="feature-pill flex items-center gap-2 text-sm uppercase font-bold text-white">
+                <span>[+] Agile Response</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEAHLIAN / SKILLS SECTION (Diperpendek untuk kerapian template, gunakan yang sama dari aslinya namun dengan styling Y2K yang sudah di-inject CSS) -->
+    <section class="section" id="keahlian">
+      <div class="container mx-auto">
+        <div class="section-header text-center" data-reveal>
+          <div class="subheading-gold">> System_Capabilities</div>
+          <h2 class="heading-serif section-title mt-2">Tech Stack & Tools</h2>
+          <br>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="skill-card p-6" data-reveal>
+            <h3 class="skill-card-title text-xl font-bold font-serif text-[var(--y2k-pink)] mb-4">Editing Suite</h3>
+            <ul class="skill-card-list space-y-4">
+              <li class="skill-list-item"><span class="text-white">Premiere Pro</span><div class="skill-meter-bg h-2 mt-1"><div class="skill-meter-fill h-2" style="width: 95%;"></div></div></li>
+              <li class="skill-list-item"><span class="text-white">After Effects</span><div class="skill-meter-bg h-2 mt-1"><div class="skill-meter-fill h-2" style="width: 88%;"></div></div></li>
+            </ul>
+          </div>
+          <div class="skill-card p-6 delay-1" data-reveal>
+            <h3 class="skill-card-title text-xl font-bold font-serif text-[var(--y2k-cyan)] mb-4">Design Tools</h3>
+            <ul class="skill-card-list space-y-4">
+              <li class="skill-list-item"><span class="text-white">Adobe Photoshop</span><div class="skill-meter-bg h-2 mt-1"><div class="skill-meter-fill h-2" style="width: 94%;"></div></div></li>
+              <li class="skill-list-item"><span class="text-white">Illustrator / Canva</span><div class="skill-meter-bg h-2 mt-1"><div class="skill-meter-fill h-2" style="width: 90%;"></div></div></li>
+            </ul>
+          </div>
+          <div class="skill-card p-6 delay-2" data-reveal>
+            <h3 class="skill-card-title text-xl font-bold font-serif text-[var(--y2k-yellow)] mb-4">Broadcasting</h3>
+            <ul class="skill-card-list space-y-4">
+              <li class="skill-list-item"><span class="text-white">OBS Studio</span><div class="skill-meter-bg h-2 mt-1"><div class="skill-meter-fill h-2" style="width: 92%;"></div></div></li>
+              <li class="skill-list-item"><span class="text-white">Sound Design</span><div class="skill-meter-bg h-2 mt-1"><div class="skill-meter-fill h-2" style="width: 94%;"></div></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK & FORM KERJA SAMA (Diperbarui Sesuai Permintaan) -->
+    <section class="section" id="kontak">
+      <div class="container mx-auto">
+        <div class="section-header text-center" data-reveal>
+          <div class="subheading-gold">> ping network_client</div>
+          <h2 class="heading-serif section-title mt-2">Inisiasi Protokol Kerja Sama</h2>
+          <br>
+        </div>
+
+        <div class="contact-grid grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <!-- Informasi Kontak -->
+          <div class="contact-info-card p-8" data-reveal>
+            <h3 class="contact-info-title font-serif text-2xl text-[var(--y2k-cyan)] mb-4">Saluran Komunikasi</h3>
+            
+            <div class="contact-direct-list space-y-6 mt-6">
+              <!-- WhatsApp -->
+              <div class="contact-direct-item flex items-start gap-4">
+                <div class="text-[var(--y2k-pink)]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <div class="contact-direct-label text-xs uppercase font-bold text-[var(--y2k-yellow)]">WhatsApp (Chat Cepat)</div>
+                  <!-- NOMOR WA DIPERBARUI DI SINI -->
+                  <a href="https://wa.me/6283857459690" target="_blank" rel="noopener" class="contact-direct-value font-mono text-lg text-white hover:text-[var(--y2k-pink)] transition-colors">+6283857459690</a>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="contact-direct-item flex items-start gap-4">
+                <div class="text-[var(--y2k-cyan)]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                </div>
+                <div>
+                  <div class="contact-direct-label text-xs uppercase font-bold text-[var(--y2k-yellow)]">Email Transmisi Data</div>
+                  <!-- EMAIL DIPASTIKAN SESUAI PERMINTAAN -->
+                  <a href="mailto:luqmannullhakimm@gmail.com" class="contact-direct-value font-mono text-lg text-white hover:text-[var(--y2k-cyan)] transition-colors break-all">luqmannullhakimm@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sosmed Row Khusus Y2K -->
+            <div class="social-links-row flex flex-wrap gap-4 mt-8 pt-6 border-t border-[var(--border-subtle)]">
+              <!-- TIKTOK DENGAN USERNAME DIPERBARUI -->
+              <a href="https://www.tiktok.com/@_matchastudio_" target="_blank" rel="noopener" class="y2k-social-btn" title="TikTok" aria-label="TikTok">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+                <span class="ml-2 font-mono text-sm tracking-wider">_matchastudio_</span>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener" class="y2k-social-btn" title="YouTube" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><polygon points="10 15 15 12 10 9 10 15"></polygon></svg>
+                <span class="ml-2 font-mono text-sm tracking-wider">YOUTUBE</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form Kontak Kanan -->
+          <div class="contact-form-box p-8 delay-1" data-reveal>
+            <form id="contact-form" autocomplete="off" class="flex flex-col gap-5">
+              <div class="form-group flex flex-col">
+                <label for="contact-name" class="font-mono text-[var(--y2k-cyan)] text-sm mb-1">> Client_Name</label>
+                <input type="text" id="contact-name" name="name" class="p-3 bg-[var(--bg-main)] border border-[var(--border-subtle)] text-white focus:border-[var(--y2k-pink)] focus:outline-none focus:ring-1 focus:ring-[var(--y2k-pink)] transition-all rounded-none" placeholder="Username / Channel" required>
+              </div>
+
+              <div class="form-group flex flex-col">
+                <label for="contact-email" class="font-mono text-[var(--y2k-cyan)] text-sm mb-1">> Return_Email</label>
+                <input type="email" id="contact-email" name="email" class="p-3 bg-[var(--bg-main)] border border-[var(--border-subtle)] text-white focus:border-[var(--y2k-pink)] focus:outline-none transition-all rounded-none" placeholder="anda@server.com" required>
+              </div>
+
+              <div class="form-group flex flex-col">
+                <label for="contact-message" class="font-mono text-[var(--y2k-cyan)] text-sm mb-1">> Payload_Data (Detail Proyek)</label>
+                <textarea id="contact-message" name="message" rows="4" class="p-3 bg-[var(--bg-main)] border border-[var(--border-subtle)] text-white focus:border-[var(--y2k-pink)] focus:outline-none transition-all rounded-none" placeholder="Jelaskan kebutuhan visual atau editing Anda..." required></textarea>
+              </div>
+
+              <button type="submit" class="form-submit-btn p-3 mt-2 w-full">
+                <span>[ EXECUTE_SEND ]</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer border-t-2 border-[var(--y2k-pink)] bg-[var(--bg-card)] mt-20 p-8">
+    <div class="container mx-auto">
+      <div class="footer-content text-center flex flex-col items-center">
+        <div class="footer-brand font-serif text-2xl text-[var(--y2k-cyan)] uppercase">Luqmanul Hakim</div>
+        <p class="font-mono text-sm text-[var(--y2k-yellow)] mt-2">CYBER.Y2K // Video Editor & Graphic Designer</p>
+        <div class="font-mono text-xs text-[var(--text-muted)] mt-6">
+          &copy; 2026 Luqmanul Hakim. SYS_ALL_RIGHTS_RESERVED.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

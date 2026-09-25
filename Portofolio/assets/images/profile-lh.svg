@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgLh" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141518"/>
+      <stop offset="50%" stop-color="#1E2026"/>
+      <stop offset="100%" stop-color="#0E0F12"/>
+    </linearGradient>
+    <linearGradient id="goldLh" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C158"/>
+      <stop offset="50%" stop-color="#B68D40"/>
+      <stop offset="100%" stop-color="#8C6D37"/>
+    </linearGradient>
+    <radialGradient id="glowHalo" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="800" fill="url(#bgLh)"/>
+
+  <!-- Classical Arch Frame -->
+  <path d="M 80 800 V 320 A 220 220 0 0 1 520 320 V 800" fill="none" stroke="#B68D40" stroke-width="2" stroke-opacity="0.35"/>
+  <path d="M 110 800 V 340 A 190 190 0 0 1 490 340 V 800" fill="none" stroke="#B68D40" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="6,6"/>
+
+  <!-- Golden Ambient Glow -->
+  <circle cx="300" cy="360" r="230" fill="url(#glowHalo)"/>
+
+  <!-- Classical Constellation Dots & Stars -->
+  <g fill="#D4AF37" opacity="0.65">
+    <path d="M 300 110 L 306 126 L 322 132 L 306 138 L 300 154 L 294 138 L 278 132 L 294 126 Z"/>
+    <circle cx="190" cy="200" r="2.5"/>
+    <circle cx="410" cy="200" r="2.5"/>
+    <circle cx="150" cy="290" r="2"/>
+    <circle cx="450" cy="290" r="2"/>
+  </g>
+
+  <!-- Figure: Video Editor & Designer Silhouette -->
+  <!-- Shoulders / Jacket -->
+  <path d="M 120 800 C 135 660 175 560 230 535 L 260 525 L 275 605 L 300 625 L 325 605 L 340 525 L 370 535 C 425 560 465 660 480 800 Z" fill="#252830"/>
+  <path d="M 230 535 L 290 655 L 300 800 L 265 800 L 255 665 Z" fill="#1C1E24" stroke="#B68D40" stroke-width="1" stroke-opacity="0.35"/>
+  <path d="M 370 535 L 310 655 L 300 800 L 335 800 L 345 665 Z" fill="#202229" stroke="#B68D40" stroke-width="1" stroke-opacity="0.35"/>
+
+  <!-- Inner Shirt & Tie/Scarf -->
+  <path d="M 275 525 L 325 525 L 315 605 L 300 625 L 285 605 Z" fill="#F4F1EA"/>
+  <path d="M 294 530 L 306 530 L 303 600 L 297 600 Z" fill="url(#goldLh)"/>
+
+  <!-- Neck -->
+  <path d="M 275 460 C 275 505 285 530 300 530 C 315 530 325 505 325 460 Z" fill="#D8BEA1"/>
+
+  <!-- Head -->
+  <path d="M 245 350 C 245 260 270 230 300 230 C 330 230 355 260 355 350 C 355 430 335 470 300 470 C 265 470 245 430 245 350 Z" fill="#E8CDAF"/>
+
+  <!-- Hair Cut -->
+  <path d="M 240 320 C 235 250 270 200 310 200 C 350 200 365 230 365 270 C 365 310 355 330 355 330 C 345 300 330 290 300 290 C 270 290 250 310 240 320 Z" fill="#1C1B19"/>
+  
+  <!-- Modern Creator Headphones on Neck / Ears -->
+  <!-- Headphone Arc -->
+  <path d="M 230 330 C 220 230 380 230 370 330" fill="none" stroke="#B68D40" stroke-width="8" stroke-linecap="round"/>
+  <!-- Headphone Earcups -->
+  <rect x="220" y="320" width="22" height="48" rx="11" fill="#181A1F" stroke="url(#goldLh)" stroke-width="2"/>
+  <rect x="358" y="320" width="22" height="48" rx="11" fill="#181A1F" stroke="url(#goldLh)" stroke-width="2"/>
+
+  <!-- Classic Glasses -->
+  <circle cx="282" cy="340" r="16" fill="none" stroke="url(#goldLh)" stroke-width="2.5"/>
+  <circle cx="318" cy="340" r="16" fill="none" stroke="url(#goldLh)" stroke-width="2.5"/>
+  <path d="M 298 340 L 302 340" stroke="url(#goldLh)" stroke-width="2.5"/>
+  <ellipse cx="282" cy="340" rx="6" ry="3.5" fill="#302925"/>
+  <ellipse cx="318" cy="340" rx="6" ry="3.5" fill="#302925"/>
+
+  <!-- Nose & Smile -->
+  <path d="M 300 335 L 297 370 L 304 372" stroke="#BA9E80" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 288 405 Q 300 412 312 405" stroke="#B5725A" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Gold Monogram Emblem "LH" at bottom -->
+  <g transform="translate(300, 740)">
+    <circle cx="0" cy="0" r="30" fill="#16181C" stroke="url(#goldLh)" stroke-width="2"/>
+    <text x="0" y="8" font-family="'Playfair Display', serif" font-size="17" font-weight="bold" fill="#E5C158" text-anchor="middle" letter-spacing="1">LH</text>
+  </g>
+</svg>

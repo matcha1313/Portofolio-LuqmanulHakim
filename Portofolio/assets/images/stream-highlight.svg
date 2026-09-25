@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="streamBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1015"/>
+      <stop offset="100%" stop-color="#1B1D24"/>
+    </linearGradient>
+    <linearGradient id="goldAcc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="soundWave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#streamBg)"/>
+
+  <!-- NLE Video Editor Window (Premiere / After Effects UI) -->
+  <rect width="800" height="38" fill="#14161C"/>
+  <circle cx="22" cy="19" r="5" fill="#EF4444"/>
+  <circle cx="40" cy="19" r="5" fill="#F59E0B"/>
+  <circle cx="58" cy="19" r="5" fill="#10B981"/>
+  <text x="400" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#7E8494" text-anchor="middle">Adobe Premiere Pro — Stream_Highlight_Final_4K.prproj</text>
+
+  <!-- Video Monitor Screen -->
+  <g transform="translate(40, 60)">
+    <rect x="0" y="0" width="460" height="260" rx="10" fill="#090A0D" stroke="#252936" stroke-width="1.5"/>
+    
+    <!-- Gameplay Background & Streamer Facecam -->
+    <path d="M 0 0 L 460 260 M 460 0 L 0 260" stroke="#1A1C24" stroke-width="1"/>
+    
+    <!-- Big Dramatic Subtitle ("CLUTCH MOMENT?!") -->
+    <text x="230" y="195" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="900" fill="#FFE500" stroke="#000000" stroke-width="4" paint-order="stroke fill" text-anchor="middle" letter-spacing="1">GILA SIH INI CLUTCH 1v4?! 🔥</text>
+    
+    <!-- Streamer Facecam Box (Classic Gold Border) -->
+    <g transform="translate(300, 20)">
+      <rect x="0" y="0" width="140" height="95" rx="8" fill="#1B1E28" stroke="url(#goldAcc)" stroke-width="2"/>
+      <!-- Streamer Silhouette -->
+      <circle cx="70" cy="40" r="20" fill="#D4AF37" opacity="0.4"/>
+      <path d="M 40 85 C 45 65 55 60 70 60 C 85 60 95 65 100 85 Z" fill="#D4AF37" opacity="0.4"/>
+      <rect x="10" y="70" width="42" height="16" rx="4" fill="#EF4444"/>
+      <text x="31" y="81" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF" text-anchor="middle">LIVE</text>
+    </g>
+
+    <!-- Playhead & Timecode -->
+    <rect x="20" y="225" width="420" height="4" rx="2" fill="#252936"/>
+    <rect x="20" y="225" width="280" height="4" rx="2" fill="#D4AF37"/>
+    <circle cx="300" cy="227" r="6" fill="#FFFFFF"/>
+    <text x="25" y="245" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8">00:04:18:22 / 00:08:45:00</text>
+  </g>
+
+  <!-- Side Panel: Sound Design & Pacing Cuts -->
+  <g transform="translate(525, 60)">
+    <rect x="0" y="0" width="235" height="260" rx="10" fill="#13151C" stroke="#252936" stroke-width="1.5"/>
+    <text x="20" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="bold" fill="#D4AF37">SOUND DESIGN & SFX</text>
+    
+    <!-- Audio Meters -->
+    <g transform="translate(20, 50)">
+      <text x="0" y="16" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#94A3B8">Streamer Mic Voice</text>
+      <rect x="0" y="24" width="195" height="10" rx="4" fill="#202430"/>
+      <rect x="0" y="24" width="165" height="10" rx="4" fill="#10B981"/>
+
+      <text x="0" y="60" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#94A3B8">Gameplay & Impact SFX</text>
+      <rect x="0" y="68" width="195" height="10" rx="4" fill="#202430"/>
+      <rect x="0" y="68" width="180" height="10" rx="4" fill="url(#soundWave)"/>
+
+      <text x="0" y="104" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#94A3B8">BGM Dynamic Pacing</text>
+      <rect x="0" y="112" width="195" height="10" rx="4" fill="#202430"/>
+      <rect x="0" y="112" width="140" height="10" rx="4" fill="#38BDF8"/>
+    </g>
+
+    <!-- Pacing Status Badge -->
+    <rect x="20" y="195" width="195" height="42" rx="8" fill="#1D212C" stroke="#B68D40" stroke-width="1"/>
+    <text x="117" y="215" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#F4F1EA" text-anchor="middle">High Audience Retention</text>
+    <text x="117" y="228" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#10B981" text-anchor="middle">✓ Content Pacing Optimal</text>
+  </g>
+
+  <!-- Multi-track Timeline at Bottom -->
+  <g transform="translate(40, 340)">
+    <rect x="0" y="0" width="720" height="135" rx="10" fill="#12141A" stroke="#252936" stroke-width="1.5"/>
+    
+    <!-- Timeline Tracks -->
+    <!-- Video Track 1 -->
+    <text x="15" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#7E8494">V2 (Facecam & Overlay)</text>
+    <rect x="150" y="18" width="180" height="22" rx="4" fill="#9333EA" opacity="0.8"/>
+    <rect x="340" y="18" width="220" height="22" rx="4" fill="#9333EA" opacity="0.8"/>
+    <rect x="570" y="18" width="130" height="22" rx="4" fill="#9333EA" opacity="0.8"/>
+
+    <!-- Video Track 2 -->
+    <text x="15" y="66" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#7E8494">V1 (Gameplay 60FPS)</text>
+    <rect x="150" y="52" width="550" height="22" rx="4" fill="#2563EB" opacity="0.8"/>
+
+    <!-- Audio Track 1 -->
+    <text x="15" y="100" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#7E8494">A1 (Mic Audio & FX)</text>
+    <rect x="150" y="86" width="210" height="22" rx="4" fill="#059669" opacity="0.8"/>
+    <rect x="370" y="86" width="150" height="22" rx="4" fill="#059669" opacity="0.8"/>
+    <rect x="530" y="86" width="170" height="22" rx="4" fill="#059669" opacity="0.8"/>
+    
+    <!-- Playhead Needle -->
+    <line x1="380" y1="0" x2="380" y2="135" stroke="#EF4444" stroke-width="2"/>
+    <polygon points="375,0 385,0 380,10" fill="#EF4444"/>
+  </g>
+</svg>

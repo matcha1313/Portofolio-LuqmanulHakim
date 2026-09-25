@@ -1,0 +1,656 @@
+/* ==========================================================================
+   PORTFOLIO CYBER Y2K 
+   Brutalist Design, Neon Accent, & Cyberspace Aesthetic
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABEL & TEMA WARNA (CYBER MODE)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Font Families Y2K */
+  --font-serif: 'Chakra Petch', sans-serif; /* Digunakan untuk heading gaya tech/cyber */
+  --font-sans: 'Space Grotesk', monospace, sans-serif;
+  --font-mono: 'Silkscreen', monospace;
+
+  /* Tema Utama: Cyber Dark */
+  --bg-primary: #05050a;
+  --bg-secondary: #0a0a14;
+  --bg-card: rgba(10, 10, 20, 0.8);
+  --bg-card-hover: rgba(15, 15, 30, 0.95);
+  
+  --text-primary: #ffffff;
+  --text-secondary: #00ffff;
+  --text-muted: #8888aa;
+  
+  /* Y2K Accent Colors */
+  --accent-gold: #ff00ff; /* Sebenarnya ini adalah Neon Pink, variabel nama tetap untuk kompatibilitas script */
+  --accent-gold-light: #ff66ff;
+  --accent-gold-hover: #cc00cc;
+  --accent-gold-rgb: 255, 0, 255;
+  --accent-tint: rgba(255, 0, 255, 0.15);
+
+  --border-subtle: #2a2a4a;
+  --border-gold: #00ffff; /* Cyber Cyan */
+  --border-card: #ff00ff;
+
+  --nav-bg: rgba(5, 5, 10, 0.95);
+  --nav-border: #ff00ff;
+  --nav-shadow: #00ffff;
+  
+  /* Brutalist Shadows */
+  --card-shadow: 6px 6px 0px var(--border-gold);
+  --card-shadow-hover: 10px 10px 0px #eaff00; /* Neon Yellow Hover */
+
+  --badge-bg: rgba(0, 255, 255, 0.1);
+  --badge-text: #00ffff;
+
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+  /* Y2K Variables Tambahan */
+  --y2k-pink: #ff00ff;
+  --y2k-cyan: #00ffff;
+  --y2k-yellow: #eaff00;
+}
+
+/* Fallback jika script mencoba memaksa mode terang (kita paksakan dark-cyberpunk terus) */
+[data-theme="light"] {
+  --bg-primary: #e5e5f0;
+  --bg-secondary: #d0d0e0;
+  --bg-card: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #cc00cc;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --border-subtle: #9999aa;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET DASAR & GLOBAL STYLES (CYBERSPACE BACKGROUND)
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  transition: background-color 0.4s var(--ease-smooth), color 0.4s var(--ease-smooth);
+  position: relative;
+  min-height: 100vh;
+  
+  /* Cyberspace Grid Pattern */
+  background-image:
+        linear-gradient(var(--border-subtle) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+::selection {
+  background-color: var(--y2k-pink);
+  color: #FFFFFF;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Tipografi Utama Y2K */
+.heading-serif {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.subheading-gold {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--y2k-cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  text-shadow: 2px 2px 0px var(--y2k-pink);
+}
+
+/* Mematikan Ornamen Klasik Dividers */
+.classic-divider {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. LATAR BELAKANG KANVAS PARTIKEL
+   -------------------------------------------------------------------------- */
+#ambient-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   4. KURSOR KUSTOM INTERAKTIF (TARGET RETICLE Y2K)
+   -------------------------------------------------------------------------- */
+.custom-cursor-dot,
+.custom-cursor-outline {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease, transform 0.1s ease-out;
+}
+
+.custom-cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--y2k-yellow);
+  border-radius: 0; /* Kotak */
+}
+
+.custom-cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px dashed var(--y2k-cyan);
+  border-radius: 0; /* Kotak */
+  opacity: 0.8;
+  transition: width 0.15s ease, height 0.15s ease, border-color 0.25s ease;
+}
+
+.cursor-hover .custom-cursor-outline {
+  width: 60px;
+  height: 60px;
+  border-style: solid;
+  border-color: var(--y2k-pink);
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 1;
+}
+
+@media (pointer: coarse) {
+  .custom-cursor-dot,
+  .custom-cursor-outline { display: none !important; }
+}
+
+/* --------------------------------------------------------------------------
+   5. FLOATING NAVBAR TENGAH ATAS (CYBER DOCK)
+   -------------------------------------------------------------------------- */
+.floating-navbar-wrapper {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 90%;
+  max-width: 880px;
+  transition: all 0.4s var(--ease-spring);
+}
+
+.floating-navbar-wrapper.scrolled {
+  top: 0.75rem;
+  max-width: 820px;
+}
+
+.floating-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 1rem 0.55rem 1.4rem;
+  background-color: var(--nav-bg);
+  border: 2px solid var(--y2k-pink);
+  border-radius: 0; /* BRUTALIST */
+  box-shadow: 0px 4px 0px var(--y2k-cyan);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.floating-navbar:hover {
+  border-color: var(--y2k-cyan);
+  box-shadow: 6px 6px 0px var(--y2k-pink);
+}
+
+/* Logo Monogram */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.brand-monogram {
+  width: 34px;
+  height: 34px;
+  border-radius: 0;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: #000;
+  background: var(--y2k-cyan);
+  font-family: var(--font-mono);
+  position: relative;
+}
+
+/* Menu Navigasi */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.25rem;
+  position: relative;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-radius: 0;
+  transition: color 0.25s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.nav-link:hover { color: var(--y2k-pink); }
+.nav-link.active { color: #000; font-weight: 700; }
+
+.nav-indicator-pill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 0;
+  background-color: var(--y2k-cyan);
+  border: 2px solid var(--y2k-pink);
+  pointer-events: none;
+  z-index: 1;
+  transition: all 0.2s linear; /* Pergerakan kotak kaku */
+  opacity: 0;
+}
+
+/* Aksi Kanan (Theme Toggle & CTA) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.theme-toggle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--y2k-cyan);
+  background-color: var(--bg-main);
+  border: 2px solid var(--y2k-pink);
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--y2k-pink);
+  color: #fff;
+  box-shadow: 2px 2px 0px var(--y2k-yellow);
+}
+
+.nav-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: 0;
+  font-size: 0.84rem;
+  font-weight: 700;
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  background: var(--bg-main);
+  color: var(--y2k-cyan);
+  box-shadow: 4px 4px 0px var(--y2k-pink);
+  border: 2px solid var(--y2k-cyan);
+  transition: all 0.2s ease;
+}
+
+.nav-cta-btn:hover {
+  background: var(--y2k-cyan);
+  color: #000;
+  box-shadow: -2px -2px 0px var(--y2k-pink);
+  transform: translate(2px, 2px);
+}
+
+/* Mobile Toggle */
+.mobile-nav-toggle {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 0;
+  align-items: center;
+  justify-content: center;
+  color: var(--y2k-pink);
+  background-color: transparent;
+  border: 2px solid var(--y2k-cyan);
+}
+
+.hamburger-line, .hamburger-line::before, .hamburger-line::after {
+  width: 18px;
+  height: 2px;
+  background-color: currentColor;
+  display: block;
+  position: relative;
+  transition: all 0.2s;
+}
+.hamburger-line::before { content: ''; position: absolute; top: -6px; }
+.hamburger-line::after { content: ''; position: absolute; top: 6px; }
+
+.mobile-nav-toggle.open .hamburger-line { background-color: transparent; }
+.mobile-nav-toggle.open .hamburger-line::before { top: 0; transform: rotate(45deg); }
+.mobile-nav-toggle.open .hamburger-line::after { top: 0; transform: rotate(-45deg); }
+
+/* --------------------------------------------------------------------------
+   6. SELEKTOR TOMBOL BRUTALIST UMUM
+   -------------------------------------------------------------------------- */
+.btn-classic-primary, .btn-classic-secondary, .form-submit-btn, .filter-btn {
+  background: var(--bg-main) !important;
+  border: 2px solid var(--y2k-cyan) !important;
+  color: var(--y2k-cyan) !important;
+  box-shadow: 4px 4px 0px var(--y2k-pink) !important;
+  border-radius: 0 !important;
+  font-family: var(--font-serif);
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-classic-primary:hover, .btn-classic-secondary:hover, .form-submit-btn:hover, .filter-btn:hover {
+  background: var(--y2k-cyan) !important;
+  color: #000 !important;
+  box-shadow: -4px -4px 0px var(--y2k-pink) !important;
+  transform: translate(2px, 2px);
+}
+.filter-btn.active {
+    background: var(--y2k-pink) !important;
+    color: #fff !important;
+    border-color: var(--y2k-pink) !important;
+    box-shadow: 4px 4px 0px var(--y2k-cyan) !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. STRUKTUR CARD Y2K (Skills, Portfolio, Forms)
+   -------------------------------------------------------------------------- */
+.skill-card, .project-card, .contact-info-card, .contact-form-box, .about-card-box {
+  background: var(--bg-card) !important;
+  border: 2px solid var(--y2k-pink) !important;
+  box-shadow: 6px 6px 0px var(--y2k-cyan) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 0 !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-card:hover, .project-card:hover {
+  transform: translateY(-4px) translate(-4px);
+  box-shadow: 12px 12px 0px var(--y2k-yellow) !important;
+  border-color: var(--y2k-cyan) !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. HERO SECTION COMPONENTS
+   -------------------------------------------------------------------------- */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 7.5rem;
+  padding-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero-badge-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--y2k-cyan);
+  background: rgba(0, 255, 255, 0.1);
+  font-family: var(--font-mono);
+  color: var(--y2k-cyan);
+}
+.status-pulse {
+  width: 8px;
+  height: 8px;
+  background-color: var(--y2k-yellow);
+  box-shadow: 0 0 10px var(--y2k-yellow);
+  border-radius: 0;
+}
+
+.hero-title .highlight-gold {
+  color: var(--y2k-pink);
+  text-shadow: 3px 3px 0px var(--y2k-cyan);
+  -webkit-text-stroke: 1px #fff;
+  font-style: normal;
+}
+
+/* Hero Stats */
+.hero-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 2px dashed var(--border-subtle);
+}
+.stat-number {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  color: #fff;
+}
+.stat-number span { color: var(--y2k-pink); }
+.stat-label { font-family: var(--font-mono); font-size: 0.75rem; color: var(--y2k-cyan); }
+
+/* Hero Visual (Kanan) */
+.vintage-frame-container { position: relative; width: 100%; max-width: 380px; }
+.vintage-frame-outer {
+  border: 4px solid var(--y2k-cyan);
+  box-shadow: 12px 12px 0px var(--y2k-pink);
+  background: var(--bg-main);
+  padding: 10px;
+}
+.vintage-frame-inner {
+  border: 2px dashed var(--y2k-yellow);
+  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+.vintage-frame-inner img { filter: contrast(120%) saturate(150%) hue-rotate(15deg); }
+
+.vintage-stamp {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 80px;
+  height: 80px;
+  background: var(--y2k-yellow);
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0px var(--y2k-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+.stamp-inner { color: #000; font-family: var(--font-mono); }
+
+.floating-badge-card {
+  position: absolute;
+  bottom: -15px;
+  left: -15px;
+  background: var(--bg-main);
+  border: 2px solid var(--y2k-cyan);
+  box-shadow: 4px 4px 0px var(--y2k-pink);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  z-index: 6;
+}
+
+/* --------------------------------------------------------------------------
+   9. SKILLS & PORTFOLIO COMPONENT SPECIFICS
+   -------------------------------------------------------------------------- */
+.skill-icon-container {
+  width: 50px; height: 50px;
+  background: var(--bg-main);
+  border: 2px solid var(--y2k-cyan);
+  color: var(--y2k-pink);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.skill-card-list { display: flex; flex-direction: column; gap: 0.75rem; list-style: none;}
+.skill-list-item { font-family: var(--font-mono); font-size: 0.75rem;}
+.skill-meter-bg { background: var(--border-subtle); width: 100%; height: 8px; border: 1px solid #000;}
+.skill-meter-fill { background: linear-gradient(90deg, var(--y2k-cyan), var(--y2k-pink)); height: 100%; }
+
+/* Portofolio Card Internal */
+.project-media-wrapper { position: relative; aspect-ratio: 16/10; border-bottom: 2px solid var(--y2k-pink); }
+.project-badge-tag {
+  position: absolute; top: 1rem; left: 1rem;
+  background: var(--y2k-yellow); color: #000;
+  border: 2px solid #000; padding: 0.2rem 0.5rem;
+  font-family: var(--font-mono); font-size: 0.7rem; z-index: 2;
+}
+.project-overlay-action {
+  position: absolute; inset: 0;
+  background: rgba(255,0,255,0.4); backdrop-filter: blur(2px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.2s; z-index: 3;
+}
+.project-card:hover .project-overlay-action { opacity: 1; }
+.btn-icon-round {
+  width: 50px; height: 50px; border-radius: 0;
+  background: var(--y2k-cyan); border: 2px solid #000; color: #000;
+  box-shadow: 4px 4px 0px #000; display: flex; align-items: center; justify-content: center;
+}
+.btn-icon-round:hover { background: var(--y2k-yellow); transform: translate(2px,2px); box-shadow: 2px 2px 0px #000;}
+
+.project-content { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+.project-title { font-family: var(--font-serif); font-size: 1.25rem; color: var(--y2k-cyan); margin-bottom: 0.5rem; text-transform: uppercase;}
+.project-excerpt { font-size: 0.85rem; color: #fff; margin-bottom: 1rem; }
+.project-tech-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; border-top: 1px dashed var(--border-subtle); padding-top: 0.8rem;}
+.tech-tag { font-family: var(--font-mono); font-size: 0.65rem; background: var(--border-subtle); color: #fff; padding: 0.2rem 0.4rem; border: 1px solid #000;}
+
+/* --------------------------------------------------------------------------
+   10. MODAL & TOAST
+   -------------------------------------------------------------------------- */
+.project-modal-backdrop {
+  position: fixed; inset: 0; background: rgba(5,5,10,0.9);
+  display: flex; align-items: center; justify-content: center; padding: 1.5rem;
+  z-index: 2000; opacity: 0; visibility: hidden; transition: 0.2s;
+}
+.project-modal-backdrop.open { opacity: 1; visibility: visible; }
+.project-modal-window {
+  width: 100%; max-width: 700px; max-height: 90vh; overflow-y: auto;
+  background: var(--bg-main); border: 4px solid var(--y2k-pink);
+  box-shadow: 10px 10px 0px var(--y2k-cyan); border-radius: 0; position: relative;
+}
+.modal-close-btn {
+  position: absolute; top: 1rem; right: 1rem;
+  width: 40px; height: 40px; background: var(--y2k-yellow); border: 2px solid #000; color: #000;
+  display: flex; align-items: center; justify-content: center; z-index: 10;
+}
+.modal-close-btn:hover { background: var(--y2k-pink); color: #fff; }
+.modal-media-wrap { aspect-ratio: 16/9; border-bottom: 4px solid var(--y2k-cyan); }
+.modal-media-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.modal-body-content { padding: 2rem; }
+.modal-project-title { font-family: var(--font-serif); font-size: 1.8rem; color: var(--y2k-cyan); text-transform: uppercase;}
+.modal-section-subtitle { font-family: var(--font-mono); font-size: 0.8rem; color: var(--y2k-pink); }
+
+.toast-notification {
+  position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: var(--bg-main); border: 2px solid var(--y2k-cyan); color: #fff;
+  padding: 1rem 1.5rem; box-shadow: 6px 6px 0px var(--y2k-pink); font-family: var(--font-serif);
+  display: flex; align-items: center; gap: 0.5rem; z-index: 3000; opacity: 0; visibility: hidden;
+}
+.toast-notification.active { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* --------------------------------------------------------------------------
+   11. HELPER CLASSES & MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+.section { padding: 6rem 0; }
+[data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity 0.5s, transform 0.5s; }
+[data-reveal].is-revealed { opacity: 1; transform: translateY(0); }
+.delay-1 { transition-delay: 0.1s !important; }
+.delay-2 { transition-delay: 0.2s !important; }
+
+@media (max-width: 992px) {
+  .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero-visual-col { order: -1; margin-bottom: 2rem;}
+  .vintage-frame-container { max-width: 300px; }
+}
+
+@media (max-width: 768px) {
+  .floating-navbar-wrapper { width: 95%; }
+  .nav-menu {
+    position: absolute; top: calc(100% + 0.5rem); left: 0; width: 100%;
+    background: var(--bg-main); border: 2px solid var(--y2k-pink); box-shadow: 4px 4px 0px var(--y2k-cyan);
+    flex-direction: column; padding: 1rem; opacity: 0; visibility: hidden;
+  }
+  .nav-menu.open { opacity: 1; visibility: visible; }
+  .nav-indicator-pill, .nav-cta-btn { display: none; }
+  .mobile-nav-toggle { display: flex; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+}

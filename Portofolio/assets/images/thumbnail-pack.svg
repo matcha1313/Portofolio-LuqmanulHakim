@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="thBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111317"/>
+      <stop offset="100%" stop-color="#1C2028"/>
+    </linearGradient>
+    <linearGradient id="ytRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#thBg)"/>
+
+  <!-- Top Bar -->
+  <rect width="800" height="40" fill="#13161C"/>
+  <circle cx="22" cy="20" r="5" fill="#EF4444"/>
+  <circle cx="40" cy="20" r="5" fill="#F59E0B"/>
+  <circle cx="58" cy="20" r="5" fill="#10B981"/>
+  <text x="400" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#7E8496" text-anchor="middle">Photoshop & Illustrator — YouTube Streamer Thumbnail Pack (High Click-Through Rate)</text>
+
+  <!-- Big YouTube Thumbnail Showcase Mockup (16:9) -->
+  <g transform="translate(60, 65)">
+    <rect x="0" y="0" width="460" height="260" rx="14" fill="#0B0D12" stroke="#B68D40" stroke-width="2"/>
+
+    <!-- High Impact Graphics inside Thumbnail -->
+    <path d="M 0 0 L 460 260 M 0 260 L 460 0" stroke="#1D2230" stroke-width="2"/>
+    <circle cx="230" cy="130" r="90" fill="#FF0000" opacity="0.2"/>
+
+    <!-- Streamer Reaction Silhouette with Glowing Border -->
+    <g transform="translate(310, 80)">
+      <circle cx="60" cy="40" r="35" fill="#F59E0B" stroke="#FFE500" stroke-width="4"/>
+      <path d="M 10 180 C 15 120 35 100 60 100 C 85 100 105 120 110 180 Z" fill="#F59E0B" stroke="#FFE500" stroke-width="4"/>
+      <!-- Shocked Expression Eyes & Mouth -->
+      <circle cx="50" cy="35" r="5" fill="#000000"/>
+      <circle cx="70" cy="35" r="5" fill="#000000"/>
+      <ellipse cx="60" cy="55" rx="10" ry="14" fill="#000000"/>
+    </g>
+
+    <!-- Bold Clickable Typography Left -->
+    <g transform="translate(30, 70)">
+      <rect x="-8" y="-18" width="220" height="46" rx="8" fill="#FF0000"/>
+      <text x="10" y="14" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" letter-spacing="1">DIPAKSA END?!</text>
+
+      <g transform="translate(0, 55)">
+        <text x="0" y="16" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900" fill="#FFE500" stroke="#000000" stroke-width="5" paint-order="stroke fill">TERBONGKAR!!</text>
+      </g>
+
+      <!-- Warning Badge -->
+      <g transform="translate(0, 95)">
+        <rect x="0" y="0" width="130" height="28" rx="6" fill="#10B981"/>
+        <text x="65" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">100% NO CLICKBAIT</text>
+      </g>
+    </g>
+
+    <!-- Timestamp tag -->
+    <rect x="390" y="225" width="55" height="22" rx="4" fill="#000000" fill-opacity="0.85"/>
+    <text x="417" y="240" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">18:42</text>
+  </g>
+
+  <!-- Right: Thumbnail Performance Stats -->
+  <g transform="translate(550, 75)">
+    <text x="0" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="bold" fill="#D4AF37" letter-spacing="2">CTR OPTIMIZATION</text>
+    <text x="0" y="55" font-family="'Playfair Display', serif" font-size="24" font-weight="bold" fill="#FFFFFF">Desain Thumbnail</text>
+    <text x="0" y="85" font-family="'Playfair Display', serif" font-size="24" font-style="italic" fill="#FF0000">Daya Tarik Tinggi</text>
+
+    <!-- Stat 1 -->
+    <g transform="translate(0, 115)">
+      <rect x="0" y="0" width="190" height="55" rx="10" fill="#171A24" stroke="#2B2F3D" stroke-width="1"/>
+      <text x="16" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#7E8496">CLICK-THROUGH RATE</text>
+      <text x="16" y="45" font-family="'Playfair Display', serif" font-size="18" font-weight="bold" fill="#10B981">14.2% Rata-rata</text>
+    </g>
+
+    <!-- Stat 2 -->
+    <g transform="translate(0, 185)">
+      <rect x="0" y="0" width="190" height="55" rx="10" fill="#171A24" stroke="#2B2F3D" stroke-width="1"/>
+      <text x="16" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#7E8496">SOFTWARE DIGUNAKAN</text>
+      <text x="16" y="45" font-family="'Playfair Display', serif" font-size="16" font-weight="bold" fill="#D4AF37">Photoshop & Corel</text>
+    </g>
+  </g>
+
+  <!-- Bottom Thumbnails Strip -->
+  <g transform="translate(60, 350)">
+    <rect x="0" y="0" width="220" height="110" rx="8" fill="#171A24" stroke="#2B2F3D" stroke-width="1"/>
+    <text x="110" y="60" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#7E8496" text-anchor="middle">Thumbnail Highlight #02</text>
+
+    <rect x="250" y="0" width="220" height="110" rx="8" fill="#171A24" stroke="#2B2F3D" stroke-width="1"/>
+    <text x="360" y="60" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#7E8496" text-anchor="middle">Thumbnail Live Stream #03</text>
+
+    <rect x="500" y="0" width="240" height="110" rx="8" fill="#171A24" stroke="#2B2F3D" stroke-width="1"/>
+    <text x="620" y="60" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#7E8496" text-anchor="middle">Thumbnail Podcast Creator #04</text>
+  </g>
+</svg>

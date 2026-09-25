@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p1Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141312"/>
+      <stop offset="100%" stop-color="#24211D"/>
+    </linearGradient>
+    <linearGradient id="p1Gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C158"/>
+      <stop offset="100%" stop-color="#B68D40"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#p1Bg)"/>
+  
+  <!-- Browser Chrome Bar -->
+  <rect width="800" height="40" fill="#1C1B19"/>
+  <circle cx="25" cy="20" r="5" fill="#EF4444" opacity="0.8"/>
+  <circle cx="45" cy="20" r="5" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="65" cy="20" r="5" fill="#10B981" opacity="0.8"/>
+  <rect x="240" y="10" width="320" height="20" rx="10" fill="#2C2A26"/>
+  <text x="400" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#8C877D" text-anchor="middle">aura-luxury-heritage.com</text>
+
+  <!-- Luxury Storefront Layout -->
+  <!-- Top Bar -->
+  <line x1="60" y1="80" x2="740" y2="80" stroke="#B68D40" stroke-opacity="0.3"/>
+  <text x="400" y="72" font-family="'Playfair Display', serif" font-size="18" font-weight="bold" fill="#F4F1EA" text-anchor="middle" letter-spacing="4">AURA HERITAGE</text>
+  <text x="70" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#B68D40" letter-spacing="2">GENÈVE 1892</text>
+  <text x="730" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#A09D95" text-anchor="end">CART (0)</text>
+
+  <!-- Hero Feature: Luxury Watch -->
+  <g transform="translate(180, 260)">
+    <circle cx="0" cy="0" r="110" fill="#181715" stroke="url(#p1Gold)" stroke-width="4"/>
+    <circle cx="0" cy="0" r="100" fill="#201E1B" stroke="#B68D40" stroke-width="1" stroke-dasharray="2,6"/>
+    <!-- Watch dial & hands -->
+    <line x1="0" y1="-85" x2="0" y2="-75" stroke="#E5C158" stroke-width="3"/>
+    <line x1="85" y1="0" x2="75" y2="0" stroke="#E5C158" stroke-width="3"/>
+    <line x1="0" y1="85" x2="0" y2="75" stroke="#E5C158" stroke-width="3"/>
+    <line x1="-85" y1="0" x2="-75" y2="0" stroke="#E5C158" stroke-width="3"/>
+    <line x1="0" y1="0" x2="40" y2="-30" stroke="#F4F1EA" stroke-width="3" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="-20" y2="45" stroke="#E5C158" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="6" fill="#E5C158"/>
+    <!-- Strap segments -->
+    <path d="M -45 -110 L -35 -200 L 35 -200 L 45 -110 Z" fill="#2A2622" stroke="#B68D40" stroke-width="1"/>
+    <path d="M -45 110 L -35 200 L 35 200 L 45 110 Z" fill="#2A2622" stroke="#B68D40" stroke-width="1"/>
+  </g>
+
+  <!-- Editorial Typography Right Side -->
+  <g transform="translate(380, 160)">
+    <text x="0" y="0" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#B68D40" letter-spacing="3">EDISI TERBATAS 2025</text>
+    <text x="0" y="45" font-family="'Playfair Display', serif" font-size="34" font-weight="bold" fill="#FFFFFF" line-height="1.2">The Grand Chrono</text>
+    <text x="0" y="80" font-family="'Playfair Display', serif" font-size="34" font-style="italic" fill="#E5C158">Masterpiece No. 07</text>
+    
+    <text x="0" y="125" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#B2AEA5" width="300">
+      Perpaduan presisi horologi Swiss dengan bingkai emas 18 karat murni.
+    </text>
+    <text x="0" y="145" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#B2AEA5">
+      Dirancang untuk mereka yang menghargai keabadian waktu.
+    </text>
+
+    <!-- Buy Button -->
+    <rect x="0" y="180" width="160" height="42" rx="21" fill="url(#p1Gold)"/>
+    <text x="80" y="206" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="bold" fill="#141312" text-anchor="middle">JELAJAHI KARYA</text>
+    
+    <rect x="175" y="180" width="130" height="42" rx="21" fill="none" stroke="#B68D40" stroke-width="1.5"/>
+    <text x="240" y="206" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#F4F1EA" text-anchor="middle">$14,500 USD</text>
+  </g>
+</svg>

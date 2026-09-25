@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p5Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111317"/>
+      <stop offset="100%" stop-color="#1B1E26"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#p5Bg)"/>
+  
+  <rect width="800" height="40" fill="#171A21"/>
+  <circle cx="25" cy="20" r="5" fill="#EF4444" opacity="0.8"/>
+  <circle cx="45" cy="20" r="5" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="65" cy="20" r="5" fill="#10B981" opacity="0.8"/>
+  <text x="400" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#7C8494" text-anchor="middle">lumina-analytics.cloud/insights</text>
+
+  <!-- SaaS Analytics Heatmap & AI Insights -->
+  <g transform="translate(60, 75)">
+    <text x="0" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" letter-spacing="3" fill="#38BDF8">AI POWERED ENGINE</text>
+    <text x="0" y="55" font-family="'Playfair Display', serif" font-size="28" font-weight="bold" fill="#FFFFFF">Lumina Smart Intelligence</text>
+  </g>
+
+  <!-- Metric Circles and Bars -->
+  <g transform="translate(60, 160)">
+    <!-- Widget 1: Radar/Gauge -->
+    <rect x="0" y="0" width="320" height="270" rx="16" fill="#171A22" stroke="#252A37" stroke-width="1"/>
+    <text x="24" y="34" font-family="'Playfair Display', serif" font-size="15" font-weight="bold" fill="#FFFFFF">Indeks Efisiensi Prediktif</text>
+    
+    <circle cx="160" cy="145" r="75" fill="none" stroke="#252A37" stroke-width="12"/>
+    <circle cx="160" cy="145" r="75" fill="none" stroke="#D4AF37" stroke-width="12" stroke-dasharray="360" stroke-dashoffset="75" stroke-linecap="round"/>
+    
+    <text x="160" y="145" font-family="'Playfair Display', serif" font-size="34" font-weight="bold" fill="#FFFFFF" text-anchor="middle">91.4%</text>
+    <text x="160" y="170" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Akurasi Model ML</text>
+    <text x="160" y="240" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#38BDF8" text-anchor="middle">● Pemrosesan 4.2 Juta Data / Detik</text>
+  </g>
+
+  <g transform="translate(410, 160)">
+    <!-- Widget 2: Bar Comparison -->
+    <rect x="0" y="0" width="330" height="270" rx="16" fill="#171A22" stroke="#252A37" stroke-width="1"/>
+    <text x="24" y="34" font-family="'Playfair Display', serif" font-size="15" font-weight="bold" fill="#FFFFFF">Tren Pasar Mode Mewah</text>
+
+    <!-- Bars -->
+    <g transform="translate(30, 60)">
+      <text x="0" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94A3B8">Paris Haute Couture</text>
+      <rect x="0" y="35" width="270" height="12" rx="6" fill="#252A37"/>
+      <rect x="0" y="35" width="235" height="12" rx="6" fill="#D4AF37"/>
+
+      <text x="0" y="75" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94A3B8">Milan Fashion Luxury</text>
+      <rect x="0" y="85" width="270" height="12" rx="6" fill="#252A37"/>
+      <rect x="0" y="85" width="190" height="12" rx="6" fill="#D4AF37" fill-opacity="0.8"/>
+
+      <text x="0" y="125" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94A3B8">Tokyo Avant-Garde</text>
+      <rect x="0" y="135" width="270" height="12" rx="6" fill="#252A37"/>
+      <rect x="0" y="135" width="215" height="12" rx="6" fill="#38BDF8"/>
+    </g>
+
+    <text x="24" y="240" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#10B981">↗ Proyeksi Pertumbuhan Kuartal Depan +22%</text>
+  </g>
+</svg>

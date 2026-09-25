@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1816"/>
+      <stop offset="50%" stop-color="#24211D"/>
+      <stop offset="100%" stop-color="#0F0E0D"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#B68D40"/>
+      <stop offset="100%" stop-color="#8C6D37"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="clothGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D2B28"/>
+      <stop offset="100%" stop-color="#161514"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Architectural Arch Pattern -->
+  <path d="M 100 800 V 350 A 200 200 0 0 1 500 350 V 800" fill="none" stroke="#B68D40" stroke-width="1.5" stroke-opacity="0.25"/>
+  <path d="M 140 800 V 370 A 160 160 0 0 1 460 370 V 800" fill="none" stroke="#B68D40" stroke-width="1" stroke-opacity="0.15" stroke-dasharray="6,6"/>
+  
+  <!-- Halo Glow Behind Figure -->
+  <circle cx="300" cy="380" r="220" fill="url(#halo)"/>
+
+  <!-- Vintage Ornaments & Stars -->
+  <g fill="#D4AF37" opacity="0.6">
+    <path d="M 300 130 L 305 145 L 320 150 L 305 155 L 300 170 L 295 155 L 280 150 L 295 145 Z"/>
+    <circle cx="210" cy="220" r="2"/>
+    <circle cx="390" cy="220" r="2"/>
+    <circle cx="180" cy="320" r="1.5"/>
+    <circle cx="420" cy="320" r="1.5"/>
+  </g>
+
+  <!-- Elegant Silhouette Character -->
+  <!-- Shoulders & Coat -->
+  <path d="M 130 800 C 140 680 180 580 230 550 L 260 540 L 275 620 L 300 640 L 325 620 L 340 540 L 370 550 C 420 580 460 680 470 800 Z" fill="url(#clothGrad)"/>
+  
+  <!-- Lapel / Coat Collar Detail with Gold Accent -->
+  <path d="M 230 550 L 290 670 L 300 800 L 270 800 L 260 680 Z" fill="#1F1D1B" stroke="#B68D40" stroke-width="1" stroke-opacity="0.3"/>
+  <path d="M 370 550 L 310 670 L 300 800 L 330 800 L 340 680 Z" fill="#242220" stroke="#B68D40" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Shirt & Tie/Ascot -->
+  <path d="M 275 540 L 325 540 L 315 620 L 300 640 L 285 620 Z" fill="#F4F1EA"/>
+  <path d="M 294 545 L 306 545 L 303 615 L 297 615 Z" fill="url(#goldGrad)"/>
+
+  <!-- Neck -->
+  <path d="M 275 480 C 275 520 285 545 300 545 C 315 545 325 520 325 480 Z" fill="#D8BEA1"/>
+
+  <!-- Head / Face Profile Silhouette -->
+  <path d="M 245 370 C 245 280 270 250 300 250 C 330 250 355 280 355 370 C 355 450 335 490 300 490 C 265 490 245 450 245 370 Z" fill="#E8CDAF"/>
+
+  <!-- Classic Sculpted Hair -->
+  <path d="M 240 340 C 235 270 270 220 310 220 C 350 220 365 250 365 290 C 365 330 355 350 355 350 C 345 320 330 310 300 310 C 270 310 250 330 240 340 Z" fill="#221E1C"/>
+  <path d="M 235 340 C 245 330 255 320 270 325 C 285 330 295 320 320 315 C 340 310 360 330 365 350 C 360 300 330 235 290 235 C 260 235 235 280 235 340 Z" fill="#2C2724"/>
+
+  <!-- Minimalist Facial Features -->
+  <!-- Eyebrows -->
+  <path d="M 268 340 Q 282 334 293 338" stroke="#3A332F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 307 338 Q 318 334 332 340" stroke="#3A332F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Classic Eyes -->
+  <ellipse cx="282" cy="355" rx="7" ry="4" fill="#302925"/>
+  <ellipse cx="318" cy="355" rx="7" ry="4" fill="#302925"/>
+
+  <!-- Classic Glasses (Tortoiseshell/Gold Frame) -->
+  <circle cx="282" cy="355" r="16" fill="none" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <circle cx="318" cy="355" r="16" fill="none" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <path d="M 298 355 L 302 355" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <path d="M 266 355 L 250 350" stroke="url(#goldGrad)" stroke-width="2"/>
+  <path d="M 334 355 L 350 350" stroke="url(#goldGrad)" stroke-width="2"/>
+
+  <!-- Nose -->
+  <path d="M 300 350 L 297 385 L 304 387" stroke="#BA9E80" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Lips -->
+  <path d="M 288 418 Q 300 422 312 418" stroke="#A86E5A" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Delicate Gold Signature Badge at bottom -->
+  <g transform="translate(300, 740)">
+    <circle cx="0" cy="0" r="28" fill="#1C1A18" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <text x="0" y="6" font-family="'Playfair Display', serif" font-size="16" font-weight="bold" fill="#D4AF37" text-anchor="middle">L</text>
+  </g>
+</svg>
